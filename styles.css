@@ -1,0 +1,278 @@
+/*Style sheet for intro page*/
+/*style for background*/
+.body_intro {
+    background-image: url("images/background.jpeg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+/*title in intro page*/
+.title {
+    color: black;
+    border: 2px solid lightgray;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 5px;
+    background: lightgray;
+    font-family: comic sans ms
+}
+
+/*start button*/
+.startquiz {
+    border: 1px solid lighgray;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    background: lightgray;
+    font-size: 15px;
+    margin: 0 auto;
+    display: inline-block;
+    
+}
+ 
+
+/*images*/
+#image_intro_1 {
+    width: 300px;
+    height: 200px;
+}
+
+/*for the button to link to the next page*/
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover, a:active {
+  background-color: red;
+}
+
+#link_for_next_question{
+    margin: 10px;
+}
+
+/*format for font for list questions*/
+.list_question {
+    font-family: Comic Sans MS;
+    font-size: 16px;
+}
+       
+
+/*template 1*/
+.body_1 {
+     background-image: url("images/background_1.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.question_1 {
+  margin: 30px;
+  background-color: skyblue;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+
+
+
+
+    
+/*template 2*/
+.body_2 {
+    background-image: url("images/background_2.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.question_2 {
+  margin: 30px;
+  background-color: lightgray;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+/*template 3*/
+.body_3 {
+    background-image: url("images/background_3.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.question_3 {
+  margin: 30px;
+  background-color: cyan;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+/*template 4*/
+.body_4 {
+    background-image: url("images/background_4.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.question_4 {
+  margin: 30px;
+  background-color:salmon;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+/*template 5*/
+.body_5 {
+    background-image: url("images/background_5.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.question_5 {
+  margin: 30px;
+  background-color:gold;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+/*template 6*/
+.body_6 {
+    background-image: url("images/background_6.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.question_6 {
+  margin: 30px;
+  background-color:turquoise;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+/*template 7*/
+.body_7 {
+    background-image: url("images/background_7.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.question_7 {
+  margin: 30px;
+  background-color:orange;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+/*template 8*/
+.body_8 {
+    background-image: url("images/background_8.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.question_8 {
+  margin: 30px;
+  background-color:red;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+/*template 9*/
+.body_9 {
+    background-image: url("images/background_9.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.question_9 {
+  margin: 30px;
+  background-color:yellow;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+/*template 10*/
+.body_10 {
+    background-image: url("images/background_10.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.question_10 {
+  margin: 30px;
+  background-color:skyblue;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+/*template 11*/
+.body_11 {
+    background-image: url("images/background_11.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+    width: 100px;
+    height: 100px;
+}
+
+.question_11 {
+  margin: 30px;
+  background-color:lightgray;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+/*template 12*/
+.body_12 {
+    background-image: url("images/background_12.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.question_12 {
+  margin: 30px;
+  background-color:yellow;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+/*final*/
+.final{
+    background-image: url("images/final_background.jpg");
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.final_congratulation {
+    font-size:50px;
+    font-family: Comic Sans MS;
+    color: gold;
+}
+
+.final_content {
+  margin: 30px;
+  background-color:white;
+  border: 1px solid black;
+  opacity: 0.9;
+}
+
+.final_paragraph {
+    font-size: 16px;
+    font-family: comic sans MS;
+}
+.ghost{
+display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+        
