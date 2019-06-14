@@ -1,10 +1,10 @@
-    
+   
 var score = 0
 var i = 1
 var ans = 1
 var counter = 1
-
-
+var correct = new Audio("audio/correct.wav")
+var wrong = new Audio("audio/wrong.wav")
 
 function submitAnswer(){
     y = document.getElementById("qans").value
@@ -13,11 +13,12 @@ function submitAnswer(){
     x = document.getElementById("question").value
     if (ans === 1) {
         y = document.getElementById("qans").value
-
+        document.getElementById("next").value = "Next Question"
         if (yy === "A" || yy === "B" || yy === "C" || yy === "D") {
 
             document.getElementById("question").value = "Thats great"
             document.body.style.backgroundImage = "url(images/right.png)"
+            correct.play()
 
         }
         else {
@@ -38,14 +39,14 @@ function submitAnswer(){
         if (yy === "A") {
             document.getElementById("question").value = "You are right"
             document.body.style.backgroundImage = "url(images/right.png)"
-
+correct.play()
             score++
         }
         else if (yy === "B" || yy === "C" || yy === "D") {
 
             document.getElementById("question").value = "You are wrong"
             document.body.style.backgroundImage = "url(images/wrong.png)"
-
+wrong.play()
         }
 
         else {
@@ -61,10 +62,12 @@ function submitAnswer(){
             document.getElementById("question").value = "You are right"
             document.body.style.backgroundImage = "url(images/right.png)"
             score++
+            correct.play()
         }
         else if (yy === "A" || yy === "C" || yy === "D") {
             document.getElementById("question").value = "You are wrong"
             document.body.style.backgroundImage = "url(images/wrong.png)"
+        wrong.play()
         }
         else {
             document.getElementById("question").value = "Not a proper answer"
@@ -80,10 +83,12 @@ function submitAnswer(){
             document.getElementById("question").value = "You are right"
             document.body.style.backgroundImage = "url(images/right.png)"
             score++
+            correct.play()
         }
         else if (yy === "A" || yy === "C" || yy === "D") {
             document.getElementById("question").value = "You are wrong"
             document.body.style.backgroundImage = "url(images/wrong.png)"
+        wrong.play()
         }
         else {
             document.getElementById("question").value = "Not a proper answer"
@@ -98,10 +103,12 @@ function submitAnswer(){
             document.getElementById("question").value = "You are right"
             document.body.style.backgroundImage = "url(images/right.png)"
             score++
+            correct.play()
         }
         else if (yy === "B" || yy === "C" || yy === "D") {
             document.getElementById("question").value = "You are wrong"
             document.body.style.backgroundImage = "url(images/wrong.png)"
+        wrong.play()
         }
         else {
             document.getElementById("question").value = "Not a proper answer"
@@ -116,10 +123,12 @@ function submitAnswer(){
             document.getElementById("question").value = "You are right"
             document.body.style.backgroundImage = "url(images/right.png)"
             score++
+            correct.play()
         }
         else if (yy === "A" || yy === "B" || yy === "D") {
             document.getElementById("question").value = "You are wrong"
             document.body.style.backgroundImage = "url(images/wrong.png)"
+        wrong.play()
         }
         else {
             document.getElementById("question").value = "Not a proper answer"
@@ -134,10 +143,12 @@ function submitAnswer(){
             document.getElementById("question").value = "You are right"
             document.body.style.backgroundImage = "url(images/right.png)"
             score++
+            correct.play()
         }
         else if (yy === "A" || yy === "C" || yy === "B") {
             document.getElementById("question").value = "You are wrong"
             document.body.style.backgroundImage = "url(images/wrong.png)"
+        wrong.play()
         }
         else {
             document.getElementById("question").value = "Not a proper answer"
@@ -152,10 +163,12 @@ function submitAnswer(){
             document.getElementById("question").value = "You are right"
             document.body.style.backgroundImage = "url(images/right.png)"
             score++
+            correct.play()
         }
         else if (yy === "A" || yy === "C" || yy === "B") {
             document.getElementById("question").value = "You are wrong"
             document.body.style.backgroundImage = "url(images/wrong.png)"
+        wrong.play()
         }
         else {
             document.getElementById("question").value = "Not a proper answer"
@@ -170,10 +183,12 @@ function submitAnswer(){
             document.getElementById("question").value = "You are right"
             document.body.style.backgroundImage = "url(images/right.png)"
             score++
+            correct.play()
         }
         else if (yy === "B" || yy === "C" || yy === "D") {
             document.getElementById("question").value = "You are wrong"
             document.body.style.backgroundImage = "url(images/wrong.png)"
+        wrong.play()
         }
         else {
             document.getElementById("question").value = "Not a proper answer"
@@ -188,10 +203,12 @@ function submitAnswer(){
             document.getElementById("question").value = "You are right"
             document.body.style.backgroundImage = "url(images/right.png)"
             score++
+            correct.play()
         }
         else if (yy === "A" || yy === "B" || yy === "D") {
             document.getElementById("question").value = "You are wrong"
             document.body.style.backgroundImage = "url(images/wrong.png)"
+        wrong.play()
         }
         else {
             document.getElementById("question").value = "Not a proper answer"
@@ -206,10 +223,12 @@ function submitAnswer(){
             document.getElementById("question").value = "You are right"
             document.body.style.backgroundImage = "url(images/right.png)"
             score++
+            correct.play()
         }
         else if (yy === "A" || yy === "C" || yy === "B") {
             document.getElementById("question").value = "You are wrong"
             document.body.style.backgroundImage = "url(images/wrong.png)"
+        wrong.play()
         }
         else {
             document.getElementById("question").value = "Not a proper answer"
@@ -218,7 +237,17 @@ function submitAnswer(){
         }
         document.view.qscore.value = score
     }
-   
+    
+   else if (ans === 12){
+    
+       document.getElementById("next").value = "Restart Quiz"
+       ans=0
+        i = 1
+        hintCounter = 3
+       document.getElementById("qscore").value = 0
+      document.view.qnum.value = i
+       score = 0
+   }
 	ans++; 
 btnenable()
 }
@@ -285,21 +314,93 @@ function main(){
         document.view.qans.value = ""
     }
     else if (i === 12) {
-        document.view.qnum.value = "";
-        document.getElementById("next").value = "The End"
+        document.view.qnum.value = "Yay!";
+        document.view.qans.value = ""
        
-       
-            document.view.question.value = "You got " + score + " out of 10 questions"
-            document.body.style.backgroundImage = "url(images/happy_face.png)"
+       document.getElementById("next").value = "Next Question"
+            document.view.question.value = "You got " + score + " out of 10 questions \n Good job You have finished the quiz\n You can restart the quiz by just pressing the buttons above"
+            
         
-       
+        
      
 
     }
 	i++; 
     btndisable()
+    document.view.hintbox.value = "<--- hint"
+    document.getElementById("hint").disabled = false
     document.body.style.backgroundImage = "url(images/background_title.png)"
 }
+
+var hintCounter= 3
+function hintWork() {
+    if (hintCounter > 0) {
+        if (i === 2) {
+            document.view.hintbox.value = "You really dont need a hint for this \nYou still have 3 hints left "
+
+        }
+        else if (i === 3) {
+            hintCounter--
+            document.view.hintbox.value = "Its not above 15 players \nYou have " + hintCounter + " hints left"
+            
+        }
+        else if (i === 4) {
+            hintCounter--
+            document.view.hintbox.value = "Its in Asia \nYou have " + hintCounter + " hints left"
+            
+        }
+        else if (i === 5) {
+            hintCounter--
+            document.view.hintbox.value = "It is in double digits \nYou have " + hintCounter + " hints left"
+            
+        }
+        else if (i === 6) {
+            hintCounter--
+            document.view.hintbox.value = "Its in meters \nYou have " + hintCounter + " hints left"
+            
+        }
+        else if(i === 7){
+            hintCounter--
+            document.view.hintbox.value = "Its in the Province of Alberta \nYou have " + hintCounter + " hints left"
+            
+        }
+        else if(i === 8){
+            hintCounter--
+            document.view.hintbox.value = "Its about basketball \nYou have " + hintCounter + " hints left"
+           
+        }
+        else if (i === 9) {
+            hintCounter--
+            document.view.hintbox.value = "It has something about Canada in it \nYou have " + hintCounter + " hints left"
+            
+        }
+        else if (i === 10) {
+            hintCounter--
+            document.view.hintbox.value = "He plays for Minnesotta Timberwolves \nYou have " + hintCounter + " hints left"
+
+        }
+        else if (i === 11) {
+            hintCounter--
+            document.view.hintbox.value = "Its doesnt have a ball involved \nYou have " + hintCounter + " hints left"
+           
+        }
+        else if (i === 12) {
+            hintCounter--
+            document.view.hintbox.value = "Its below 10 \nYou have " + hintCounter + " hints left"
+            
+        }
+
+        document.getElementById("hint").disabled = true
+    }
+   
+       
+    
+    else{
+        document.view.hintbox.value = "You dont have any hints left"
+    }
+}
+    
+   
 
 
 function btndisable() {
@@ -311,5 +412,4 @@ function btnenable(){
 document.getElementById("next").disabled=false
     document.getElementById("submit").disabled = true    
 }
-
 
