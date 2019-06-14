@@ -284,7 +284,7 @@ background-color:lightgray;
 padding: 15px;
 font-family:"times new roman", sans-serif;
 border:3px
-border-color:white
+
 }
 
 input[name="button"]:hover{
@@ -302,15 +302,12 @@ color:white
 body.js {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
 
-    
-
-
-
-
-
-
-
-
-
-        
+#hint {
+background-image: url("images/hint.ico");
+background-size: 75px 75px;
+height: 79px;
+width: 79px;
+background-color:indianred
+}
